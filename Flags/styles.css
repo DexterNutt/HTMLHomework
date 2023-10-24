@@ -1,0 +1,161 @@
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 250px;
+}
+
+.Germany {
+    width: 400px;
+    height: 250px;
+}
+
+.black-ger {
+    background-color: black;
+    height: 83px;
+}
+
+.red-ger {
+    background-color: red;
+    height: 83px;
+}
+
+.yellow-ger {
+    background-color: yellow;
+    height: 83px;
+}
+
+.Switzerland {
+    order: -1;
+    display: flex; 
+    background-color: red;
+    height: 400px;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+.white-1 {
+    background-color: white;
+    height: 250px;
+    width: 100px;
+    position: absolute;
+}
+
+.white-2 {
+    background-color: white;
+    width: 250px;
+    height: 100px;
+    position: absolute;
+}
+
+.America {
+    width: max-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 700px;
+}
+
+.stars {
+    background-image: url("USA.png");
+    background-size: cover;
+    height: 210px;
+    width: 300px;
+}
+
+.bars {
+    width: 400px;
+}
+
+.bar-red1 {
+    height: 30px;
+    background-color: red;
+}
+
+.bar-white1 {
+    height: 30px;
+    background-color: white;
+}
+
+.bar-red2 {
+    height: 30px;
+    background-color: red;
+}
+
+.bar-white2 {
+    height: 30px;
+    background-color: white;
+}
+
+.bar-red3 {
+    height: 30px;
+    background-color: red;
+}
+
+.bar-white3 {
+    height: 30px;
+    background-color: white;
+}
+
+.bar-red4 {
+    height: 30px;
+    background-color: red;
+} 
+
+.stripes {
+    width: 700px;
+}
+
+.stripe-white1 {
+    height: 30px;
+    background-color: white;
+}
+.stripe-white2 {
+    height: 30px;
+    background-color: white;
+}
+.stripe-white3 {
+    height: 30px;
+    background-color: white;
+}
+
+.stripe-red1 {
+    height: 30px;
+    background-color: red;
+}
+
+.stripe-red2 {
+    height: 30px;
+    background-color: red;
+}
+
+.stripe-red3 {
+    height: 30px;
+    background-color: red;
+}
+
+.France {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    height: 150px;
+    width: 300px;
+}
+
+.left {
+    background-color: navy;
+    width: 100px;
+}
+
+.center {
+    background-color: white;
+    width: 100px;
+}
+
+.right {
+    background-color: brown;
+    width: 100px;
+}
