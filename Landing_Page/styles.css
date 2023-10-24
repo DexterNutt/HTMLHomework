@@ -1,0 +1,40 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    height: 70px;
+    
+}
+
+main {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+article {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+p {
+    color:red
+}
+
+.box {
+    background-color: red;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.events {
+    width: 700px;
+    background-color: rgb(68, 68, 68);
+    color: whitesmoke;
+    padding: 20px;
+}
