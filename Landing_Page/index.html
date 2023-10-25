@@ -4,13 +4,14 @@
         <title>Landing Page</title>
         <link rel="stylesheet" href="styles.css">
     </head>
-
     <body>
+        
         <header>
-            <img src="logo.png" alt="logopic">
-            <img src="menu.png" alt="menutag">
+            <img class="logo" src="logo.png" alt="logopic">
+            <img class="menu" src="menu.png" alt="menutag">
         </header>
         <main>
+            <!-- DJ CONTENT -->
             <article>
                     <div class="pic">
                         <img height="550px" src="Headphones.jpg" alt="Man with Headphones">
@@ -31,25 +32,42 @@
                         +1 123 456 7890
                         </p>
                         <br>
-                        <h4>IMAGE FROM <u>FREEPIC</u></h4>
+                        <h4>IMAGE FROM <a href="#">FREEPIC</a></h4>
                         <div class="box"></div>
                     </div>
             </article>
-            <div class="events">
-                <h1>Latests Events</h1>
+            <!-- CONCERT CONTENT -->
+            <section class="events">
+                <h2>Latests Events</h2>
+
                 <div class="concert">
-                    <div class="cover"></div>
-                    <div class="text"></div>
+                    <div class="cover"><img src="cover1.jpg" alt="cover1"></div>
+                    <div class="concert_data">
+                        <div class="text"><span>Vatos Locos and Friends Friday 5.26</span></div>
+                        <div class="date"><span>May 19, 2021</span></div>
+                        <button>MORE</button>
+                    </div>
                 </div>
                 <div class="concert">
-                    <div class="cover"></div>
-                    <div class="text"></div>
+                    <div class="cover"><img src="cover2.jpg" alt="cover2"></div>
+                    <div class="concert_data">
+                        <div class="text"><span>II Points x Secret Project - May 1st</span></div>
+                        <div class="date"><span>March 15, 2021</span></div>
+                        <button>MORE</button>
+                    </div>
                 </div>
                 <div class="concert">
-                    <div class="cover"></div>
-                    <div class="text"></div>
+                    <div class="cover"><img src="cover3.jpg" alt="cover3"></div>
+                    <div class="concert_data">
+                        <div class="text"><span>Jean Pierre's Wynwood Remix</span></div>
+                        <div class="date"><span>February 6, 2021</span></div>
+                        <button>MORE</button>
+                    </div>
                 </div>
-            </div>
+
+                <span>Image from <a href="#">Freepik</a></span>
+                
+            </section>
         </main>
     </body>
 </html>
