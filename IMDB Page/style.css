@@ -1,0 +1,158 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+/* Header Formatting */
+
+header {
+    margin: 0 0 0 0;
+    height: 60px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 0 0;
+    height: 48px;
+    background-color: rgb(18, 18, 18);
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 4px 0px;
+    box-sizing: border-box;
+}
+ 
+/* IMDb Logo */
+
+nav .imdb-logo {
+    font-family: Impact, sans-serif;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    padding: .25em .35em;
+    border-radius: 4px;
+    background: #DBA506;
+    font-weight: 300;
+}
+
+nav .imdb-logo:hover {
+    transition: 0.2s ease-in-out;
+    filter:brightness(95%);
+}
+
+/* Menu Button */
+
+nav .menu {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    padding-left: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    padding: .65em .55em;
+    border-radius: 4px;
+    gap: .35em;
+    height: 1rem;
+}
+
+nav .menu:hover {
+    transition: 0.2s ease-in-out;
+    background-color: #222222b0;
+    filter:brightness(150%);
+}
+
+/* Drop Down */
+
+header nav .search-bar .drop-down {
+    position: relative;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+    padding-left: 8px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    cursor: pointer;
+    border-right: solid #555 1px;
+}
+
+header nav .search-bar .drop-down:hover {
+    background-color: #ccc;
+}
+
+header nav .search-bar .drop-down i{
+    background-color: inherit;
+}
+
+header nav .search-bar .drop-down i:hover {
+    transition: all 0.2s ease;
+    transform: scaleY(-1)
+}
+
+
+/* Search Bar */
+
+header nav .search-bar .search-field {
+    padding: 6px 0px 6px 8px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    /* position: relative;
+    left: 2rem; */
+}
+
+header nav .search-bar {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: #fff;
+    border: none;
+    border-radius: 4px;
+    height: 2rem;
+}
+
+header nav .search-bar:hover {
+    border: solid #DBA506 2px;
+    transition: border 0.2s ease-in-out;
+    outline: none;
+}
+
+header nav .search-bar i {
+    background-color: #fff;
+    color: #555;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    right: 0rem;
+    padding: 6px 8px 6px 8px;
+}
+
+/* IMDb Pro */
+
+header nav .imdb-pro {
+    font-family: Impact, sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    padding: .25em .35em;
+    border-radius: 4px;
+    font-weight: lighter;
+    color: #fff;
+}
+
+header nav .imdb-pro mark {
+    color: #128bb5;
+    background-color: unset;
+}
+
+header nav .imdb-pro:hover {
+    transition: 0.2s ease-in-out;
+    background-color: #222222b0;
+    filter:brightness(150%);
+}
+
+/* Separator */
+
