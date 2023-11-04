@@ -15,12 +15,14 @@ nav {
     display: flex;
     flex-direction: row;
     margin: 0 0 0 0;
-    height: 48px;
+    height: 4rem;
     background-color: rgb(18, 18, 18);
-    /* justify-content: space-between; */
+    justify-content: center;
     align-items: center;
     padding: 4px 0px;
     box-sizing: border-box;
+    padding: 0px  320px;
+
 }
  
 /* IMDb Logo */
@@ -67,7 +69,9 @@ nav .menu:hover {
 /* Drop Down */
 
 header nav .search-bar .drop-down {
+    display: inline-flex;
     position: relative;
+    align-items: center;
     left: 0;
     z-index: 1;
     background-color: #fff;
@@ -76,6 +80,16 @@ header nav .search-bar .drop-down {
     border-bottom-left-radius: 2px;
     cursor: pointer;
     border-right: solid #555 1px;
+    flex-wrap: nowrap;
+}
+
+header nav .search-bar .fa-caret-down {
+    background-color: #fff;
+    color: #555;
+    border: none;
+    position: relative;
+    left: auto;
+    padding: 6px 8px 6px 8px;
 }
 
 header nav .search-bar .drop-down:hover {
@@ -94,15 +108,6 @@ header nav .search-bar .drop-down i:hover {
 
 /* Search Bar */
 
-header nav .search-bar .search-field {
-    padding: 6px 0px 6px 8px;
-    border-radius: 4px;
-    outline: none;
-    border: none;
-    /* position: relative;
-    left: 2rem; */
-}
-
 header nav .search-bar {
     display: flex;
     align-items: center;
@@ -112,6 +117,15 @@ header nav .search-bar {
     border: none;
     border-radius: 4px;
     height: 2rem;
+    width: 45rem;
+}
+
+header nav .search-bar .search-field {
+    padding: 6px 0px 6px 8px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    width: inherit;
 }
 
 header nav .search-bar:hover {
@@ -120,15 +134,17 @@ header nav .search-bar:hover {
     outline: none;
 }
 
-header nav .search-bar i {
+
+header nav .search-bar .fa-search {
     background-color: #fff;
     color: #555;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     position: relative;
-    right: 0rem;
+    left: auto;
     padding: 6px 8px 6px 8px;
+    margin-left: auto;
 }
 
 /* IMDb Pro */
@@ -155,4 +171,211 @@ header nav .imdb-pro:hover {
 }
 
 /* Separator */
+
+header nav .watchlist {
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, sans-serif;
+    width: max-content;
+    align-items: center;
+    font-weight: bold;
+    color: #fff;
+    padding: .65em .55em;
+    border-radius: 4px;
+    gap: .35em;
+    height: 1rem;
+}
+
+header nav .watchlist a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header nav .watchlist:hover {
+    transition: 0.2s ease-in-out;
+    background-color: #222222b0;
+    filter:brightness(150%);
+}
+
+header nav .signin {
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    color: #fff;
+    padding: .65em .55em;
+    font-weight: bold;
+    border-radius: 4px;
+    height: 1rem;
+    width: 4rem;
+} 
+
+header nav .signin mark {
+    visibility:hidden;
+}
+
+header nav .signin a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header nav .signin:hover {
+    transition: 0.2s ease-in-out;
+    background-color: #222222b0;
+    filter:brightness(150%);
+}
+
+header nav .lang {
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, sans-serif;
+    width: max-content;
+    align-items: center;
+    font-weight: bold;
+    color: #fff;
+    padding: .65em .55em;
+    border-radius: 4px;
+    gap: .35em;
+    height: 1rem;
+}
+
+header nav .lang a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header nav .lang:hover {
+    transition: 0.2s ease-in-out;
+    background-color: #222222b0;
+    filter:brightness(150%);
+}
+
+/* Main Body Decorations */
+
+main {
+    margin-top: 0;
+    padding: 0px 320px;
+    background-color: #121212;
+}
+
+/* Movie Info */
+
+main .movie {
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Top UL */
+
+main .movie ul {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+    height: 2rem;
+    gap: 1rem;
+}
+
+main .movie ul li {
+    padding: .65em .55em;
+}
+
+main .movie ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: small;
+}
+
+main .movieinfo ul li {
+    font-weight: bold;
+}
+
+main .movie ul .first {
+    list-style: none;
+    height: 1rem;
+}
+
+main .movie ul .second {
+    list-style: disc;
+    height: 1rem;
+}
+
+main .movie ul .last {
+    list-style: none;
+    border-left: solid 1px grey;
+    height: 1rem;
+}
+
+main .movie ul .button {
+    display: flex;
+    gap: 1em;
+    padding-left: 1em;
+    border-right: grey solid 1px;
+}
+
+main .movie ul .button:hover {
+    transition: 0.2s ease-in-out;
+    background-color: #222222b0;
+    filter:brightness(150%);
+}
+
+main .movie ul .button a:hover {
+    text-decoration: unset;
+} 
+
+main .movie ul .share {
+    border: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 2rem ;
+    width: 2rem;
+}
+
+main .movie ul .share:hover {
+    transition: 0.2s ease-in-out;
+    background-color: #222222b0;
+    filter:brightness(150%);
+}
+
+main .movie ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Movie Title section */
+
+main .moviecontainer {
+    display: flex;
+    flex-direction: column;
+}
+
+main .movietitle {
+    display: flex;
+    flex-direction: column;
+}
+
+main .movietitle span {
+    font-size: 3rem;
+}
+
+main .movietitle ul {
+    display: inline-flex;
+    justify-content: left;
+    align-items: center;
+    gap: 0.2rem;
+    padding-left: 0px;
+    font-size: unset;
+}
+
+main .movietitle ul li {
+    padding-left: 0px;
+    padding-right: 1rem;
+}
+
+main .movietitle ul li span {
+    font-size: small;
+}
+
+/*  */
 
