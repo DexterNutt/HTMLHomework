@@ -2,6 +2,7 @@ html, body {
     margin: 0px;
     padding: 0px;
     border: 0px;
+    font-family: Arial, Helvetica, sans-serif; 
 }
 
 /* Header Formatting */
@@ -171,7 +172,7 @@ header nav .imdb-pro mark {
 header nav .imdb-pro:hover {
     transition: 0.2s ease-in-out;
     background-color: #222222b0;
-    filter:brightness(150%);
+    filter: brightness(150%);
 }
 
 header nav .watchlist {
@@ -313,12 +314,12 @@ main .movie ul .button {
     gap: 1em;
     padding-left: 1em;
     border-right: grey solid 1px;
+    background-color: rgb(211, 211, 211, 0);
 }
 
 main .movie ul .button:hover {
-    transition: 0.2s ease-in-out;
-    background-color: #222222b0;
-    filter:brightness(150%);
+    transition: 0.2s ease-in-out all;
+    background-color: rgb(211, 211, 211, 0.2);
 }
 
 main .movie ul .button a:hover {
@@ -393,7 +394,7 @@ main .movierating {
 
 main .movierating span {
     font-size: 0.9em;
-    color: whitesmoke;
+    color: rgb(245, 245, 245, 0.5);
     font-weight: bold;
 }
 
@@ -404,8 +405,14 @@ main .movierating a {
 main .movierating .bottombutton {
     background-color: inherit;
     padding: 0px 10px;
+    margin-top: 4px;
     border-radius: 4px;
+    background-color: rgb(211, 211, 211, 0);
+}
 
+main .movierating .bottombutton:hover {
+    transition: all ease-in-out 0.2s;
+    background-color: rgb(211, 211, 211, 0.2);
 }
 
 main .movierating .IMDbRating {
@@ -450,7 +457,16 @@ main .movierating .YourRating .bottom {
     font-weight: bold;
     font-size: larger;
     padding-top: 1vh;
-    gap:0.5em;
+    gap: 0.5em;
+    padding: 7px 10px;
+    border-radius: 5px;
+    margin-top: 4px;
+    background-color: rgb(211, 211, 211, 0);
+}
+
+main .movierating .YourRating .bottom:hover {
+    transition: all ease-in-out 0.2s;
+    background-color: rgb(211, 211, 211, 0.2);
 }
 
 main .movierating .Popularity {
@@ -464,6 +480,10 @@ main .movierating .Popularity .bottom {
     display: inline-flex;
     justify-content: center;
     gap: 0.5vw;
+    background-color: rgb(211, 211, 211, 0);
+    border-radius: 5px;
+    padding: 4px 4px;
+    margin-top: 4px;
 }
 
 main .movierating .Popularity .bottom i {
@@ -471,23 +491,31 @@ main .movierating .Popularity .bottom i {
     border-radius: 50%;
 }
 
-main .moviegrid {
-    display: grid;
-    grid-template-columns: repeat(5, 19%);
-    grid-template-rows: repeat(2, 200px);
+main .movierating .Popularity .bottom:hover{
+    transition: all ease-in-out 0.2s;
+    background-color: rgb(211, 211, 211, 0.2);
+}
+
+/* Movie poster and Trailer section */
+
+main .moviebox {
+    display: flex;
+    flex-direction: row;
     gap: 5px;
     justify-content: center;
     align-content: center;
     position: relative;
 }
 
-main .moviegrid .poster .banner {
+/* Overlay button (looks like a banner) */
+
+main .moviebox .poster .banner {
     position: absolute;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     top: 0;
-    left: auto;
+    left: 0;
     height: 6vh;
     width: 4vh;
     background-color: #555;
@@ -497,56 +525,77 @@ main .moviegrid .poster .banner {
     cursor: pointer;
 }
 
-main .moviegrid .poster .banner:hover {
+main .moviebox .poster .banner:hover {
     transition: all 0.2s ease;
     opacity: 80%;
 }
 
-main .moviegrid .poster {
-    grid-area: 1 / 1 / 3 / 2;
-}
+/* Poster settings */
 
-main .moviegrid .poster img {
-    height: 100%;
+main .moviebox .poster {
+    position: relative;
     cursor: pointer;
 }
 
-main .moviegrid .trailer {
-    grid-area: 1 / 2 / 3 / 5;
+main .moviebox .poster img {
+    height: 48vh;
+}
+
+main .moviebox .trailer {
     display: flex;
     justify-content: center;
     align-content: center;
 }
 
-main .moviegrid .trailer video {
-    height: 100%;
+main .moviebox .trailer video {
+    height: 48vh;
     cursor: pointer;
 }
 
-main .moviegrid .videos {
+main .moviebox .buttons {
+    height: 48vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+main .moviebox .videos {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 1vh;
     font-weight: bold;
+    padding: 1vh;
     cursor: pointer;
     color: #fff;
-    background-color: lightgrey;
+    background-color: rgb(211, 211, 211, 0.2);
     border-top-right-radius: 4px;
+    height: inherit;
+    width: 13rem;
 }
 
-main .moviegrid .videos .top {
-    opacity: revert;
-
-}
-
-main .moviegrid .videos a {
+main .moviebox .videos a {
     text-decoration: none;
     color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: small;
+    gap: 1vh;
 }
 
-main .moviegrid .images {
+main .moviebox .videos a i {
+    font-size: x-large;
+}
+
+main .moviebox .videos:hover {
+    transition: all ease-in-out 0.2s;
+    background-color: rgb(211, 211, 211, 0.5);
+}
+
+main .moviebox .images {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -555,12 +604,146 @@ main .moviegrid .images {
     padding: 1vh;
     cursor: pointer;
     color: #fff;
-    background-color: lightgrey;
+    background-color: rgb(211, 211, 211, 0.2);
     border-bottom-right-radius: 4px;
+    height: inherit;
+    width: 13rem;
 }
 
+main .moviebox .images:hover {
+    transition: all ease-in-out 0.2s;
+    background-color: rgb(211, 211, 211, 0.5);
+}
 
-main .moviegrid .images a {
+main .moviebox .images a {
     text-decoration: none;
     color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: small;
+    gap: 1vh;
+}
+
+main .moviebox .images a i {
+    font-size: x-large;
+}
+
+/* Genres Buttons */
+
+main .genres {
+    margin-top: 1vh;
+}
+
+.btn {  
+    font-family: Arial, Helvetica, sans-serif; 
+    text-transform: uppercase;
+    height: 4vh;
+}  
+
+
+.btn-moving-gradient {  
+    height: 25px;  
+    width: 75px;  
+    font-size: 1vh;  
+    font-weight: 300;  
+    color: whitesmoke;  
+    cursor: pointer;  
+    border: solid whitesmoke 1px;  
+    border-radius: 50px;
+    background-color: rgb(211, 211, 211, 0);
+}  
+
+.btn-moving-gradient:hover {  
+    transition: all 0.5s ease-in-out;
+    background-color: rgb(211, 211, 211, 0.5);
+}  
+
+/* Extra info formatting */
+
+main .xtrainfo {
+    display: flex;
+    flex-direction: row;
+}
+
+main .xtrainfo .left {
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+main .xtrainfo .left span {
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+
+main .xtrainfo .left hr {
+    color: rgb(211, 211, 211, 0.5);
+    width: 100%;
+}
+
+main .xtrainfo ul {
+    gap: 2rem;
+    display: flex;
+    margin: unset;
+    padding-left: 20px;
+}
+
+main .xtrainfo ul .first {
+    list-style: none;
+    height: 1rem;
+}
+
+main .xtrainfo ul .second {
+    list-style: disc;
+    height: 1rem;
+}
+
+main .xtrainfo a {
+    color: #128bb5;
+    text-decoration: none;
+}
+
+main .xtrainfo a:hover {
+    text-decoration: underline;
+}
+
+main .xtrainfo .director, .writers, .stars, .imdbPro {
+    display: flex;
+    align-items: center;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+main .xtrainfo .stars span {
+    margin:0px;
+
+}
+
+main .xtrainfo .imdbPro a {
+    padding-left: 40px;
+}
+
+main .xtrainfo .imdbPro a i {
+    font-size: smaller;
+}
+
+main .xtrainfo .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+main .xtrainfo .right .add-to-watchlist {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+      
+.add-to-watchlist i {
+    margin-right: 5px;
 }
