@@ -462,6 +462,7 @@ main .movierating .YourRating .bottom {
     border-radius: 5px;
     margin-top: 4px;
     background-color: rgb(211, 211, 211, 0);
+    cursor: pointer;
 }
 
 main .movierating .YourRating .bottom:hover {
@@ -484,6 +485,7 @@ main .movierating .Popularity .bottom {
     border-radius: 5px;
     padding: 4px 4px;
     margin-top: 4px;
+    cursor: pointer;
 }
 
 main .movierating .Popularity .bottom i {
@@ -505,6 +507,8 @@ main .moviebox {
     justify-content: center;
     align-content: center;
     position: relative;
+    padding: inherit;
+    margin: inherit;
 }
 
 /* Overlay button (looks like a banner) */
@@ -731,19 +735,112 @@ main .xtrainfo .imdbPro a i {
     font-size: smaller;
 }
 
+main .xtrainfo .imdbPro span {
+    font-family: Impact, sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: lighter;
+    color: #fff;
+}
+
+main .xtrainfo .imdbPro mark {
+    color: #128bb5;
+    background-color: unset;
+}
+
 main .xtrainfo .right {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 40%;
+    flex-direction: column;
 }
 
-main .xtrainfo .right .add-to-watchlist {
+/* Watchlist Button */
+
+main .xtrainfo .right .watchlistbtn {
+    border-radius: 4px;
     display: flex;
+    flex-direction: row;
+    height: 3em;
     align-items: center;
-    cursor: pointer;
 }
-      
-.add-to-watchlist i {
-    margin-right: 5px;
+
+main .xtrainfo .right .watchlistbtn .btntext {
+    display: flex;
+    cursor: pointer;
+    border-right: solid 3px  #967104;
+    background-color: rgb(236, 184, 26, 1);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    height: inherit;
+    align-items: center;
+}    
+
+main .xtrainfo .right .watchlistbtn .btntext:hover {
+    background-color: rgb(236, 184, 26, 0.8);
+}
+
+main .xtrainfo .right .watchlistbtn .btntext-right {
+    padding: 0 0.5em;
+    font-size: large;
+}
+
+main .xtrainfo .right .watchlistbtn .btntext-left {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10rem;
+    padding-left: 0.5em;
+}
+
+main .xtrainfo .right .watchlistbtn .btntext-left #bold {
+    font-weight: bold;
+    font-size:90% ;
+    color: #000;
+}
+
+main .xtrainfo .right .watchlistbtn .btntext-left #small {
+    font-size: smaller;
+    color: #000;
+}
+
+main .xtrainfo .right .watchlistbtn .chevron {
+    background-color: rgb(236, 184, 26, 1);
+    cursor: pointer;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em;
+    font-size: small;
+}
+
+main .xtrainfo .right .watchlistbtn .chevron:hover {
+    background-color: rgb(236, 184, 26, 0.8);
+}
+
+main .xtrainfo .right .reviews {
+    display: block;
+    margin-top: 2rem;
+}
+
+main .xtrainfo .right .reviews a {
+    padding-right: 1rem;
+    font-size: smaller;
+}
+
+main .xtrainfo .right .reviews a .larger {
+    background-color: unset;
+    font-size: large;
+    color: inherit;
+}
+
+main .xtrainfo .right .reviews a .green {
+    background-color: green;
+    font-size: large;
+    font-weight: bold;
+    color: #fff;
+    padding: 0.1rem;
 }

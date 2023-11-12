@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <title>Killers of the Flower Moon (2023)</title>
+    <link rel="icon" href="Images/IMDB_Logo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -123,7 +124,11 @@
                 <img src="Images/Poster.jpg" alt="MoviePoster">
                 <div class="banner"><i class="fa-solid fa-plus"></i></div>
             </div>
-            <div class="trailer"><video src="Videos/1434659607842-pgv4ql-1697547877645.mp4" id="movietrailer"></video></div>
+            <div class="trailer">
+                <video poster="Images/Thumb.png"  id="movietrailer" type="video/mp4" controls>
+                    <source src="Videos/trailer.mp4">
+                </video>
+            </div>
             <div class="buttons">
                 <div class="videos">
                     <a href="#">
@@ -209,19 +214,40 @@
                 <hr />
 
                 <div class="xtrainfo imdbPro">
-                    <span>IMDbPro</span>
+                    <span>IMDb<mark>Pro</mark></span>
 
                     <a id="imdbPro" href="#">See production info at IMDbPro<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
 
             <div class="xtrainfo right">
-                <label for="watchlist-checkbox">
-                    <div class="add-to-watchlist">
-                      <i class="fas fa-plus-circle"></i>
-                      <span>Add to Watchlist</span>
-                    </div>
-                </label>
+                
+                <div class="watchlistbtn">
+                    
+                    <div class="btntext">
+                            <div class="btntext-right">
+                                <i class="fa-solid fa-plus"></i></div>
+                            <div class="btntext-left">
+                                <span id="bold">Add to Watchlist</span>
+                                <span id="small">Added by 344K users</span>
+                            </div>
+                        </div>
+                    
+                    <div class="chevron">
+                        <i class="fa-solid fa-chevron-down"></i></div>
+                </div>  
+                
+                <div class="reviews">
+                    <p>
+                        <a href="#"><mark class="larger">617</mark> User reviews</a>
+                        <a href="#"><mark class="larger">299</mark> Critic reviews</a>
+                    </p>
+
+                    <p>
+                        <a href="#"><mark class="green">89</mark> Metascore </a>
+                    </p>
+                </div>
+
             </div>
         </div>
     </main>
